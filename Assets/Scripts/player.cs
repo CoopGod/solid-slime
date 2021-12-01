@@ -34,9 +34,14 @@ public class player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            rb.velocity = Vector2.up * playerJumpMultiplier;
+            rb.velocity = Vector2.up * (playerJumpMultiplier -0.5f);
             jumpTimeCounter = jumpTime;
             hasJumped = true;
+        }
+
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            hasJumped = false;
         }
 
         if (Input.GetKey(KeyCode.Space) && hasJumped)
