@@ -46,7 +46,6 @@ public class player : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Space) && hasJumped)
         {
-            Debug.Log(jumpTimeCounter);
             if (jumpTimeCounter > 0)
             {
                 rb.velocity = Vector2.up * playerJumpMultiplier;

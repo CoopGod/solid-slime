@@ -14,18 +14,18 @@ public class grounded : MonoBehaviour
     }
 
     // Update if players 'feet' are on the ground
-    void OnCollisionEnter2D(Collision2D col)
+    void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.collider.tag == "Ground")
+        if (col.gameObject.tag == "Ground")
         {
             Player.GetComponent<player>().isGrounded = true;
         }
     }
 
     // Update if players 'feet' are off the ground
-    void OnCollisionExit2D(Collision2D col)
+    void OnTriggerExit2D(Collider2D col)
     {
-        if (col.collider.tag == "Ground")
+        if (col.gameObject.tag == "Ground")
         {
             Player.GetComponent<player>().isGrounded = false;
         }
