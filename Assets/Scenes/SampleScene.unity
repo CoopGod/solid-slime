@@ -591,14 +591,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6221251952799501672, guid: cfc3ad9e1eec2bf45bc4a6abb253d845, type: 3}
-      propertyPath: m_Size.x
-      value: 0.8109052
-      objectReference: {fileID: 0}
-    - target: {fileID: 6221251952799501672, guid: cfc3ad9e1eec2bf45bc4a6abb253d845, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.0016764402
-      objectReference: {fileID: 0}
     - target: {fileID: 6221251954338629040, guid: cfc3ad9e1eec2bf45bc4a6abb253d845, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -646,14 +638,6 @@ PrefabInstance:
     - target: {fileID: 6221251954338629041, guid: cfc3ad9e1eec2bf45bc4a6abb253d845, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6221251954338629044, guid: cfc3ad9e1eec2bf45bc4a6abb253d845, type: 3}
-      propertyPath: m_GravityScale
-      value: 2.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6221251954338629045, guid: cfc3ad9e1eec2bf45bc4a6abb253d845, type: 3}
-      propertyPath: playerJumpMultiplier
-      value: 5.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfc3ad9e1eec2bf45bc4a6abb253d845, type: 3}
