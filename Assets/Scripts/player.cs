@@ -5,6 +5,7 @@ using UnityEngine;
 public class player : MonoBehaviour
 {
     // Global Variables
+    public int jumpAmmo = 0;
     public float playerSpeed;
     public float playerJumpMultiplier;
     float jumpTimeCounter;
@@ -58,13 +59,17 @@ public class player : MonoBehaviour
         }
     }
 
-    // When 'Shift' is pressed. swap positions with frozen prefab
+    // When 'Shift' is pressed. swap positions with frozen prefab provided you have the resources
     void Freeze()
     {
         if (Input.GetButtonDown("Shift"))
         {
-            Instantiate(frozenSlime, gameObject.transform.position, Quaternion.identity); // instantiate at current location
-            Destroy(gameObject);
+            if (jumpAmmo > 0)
+            {
+                Instantiate(frozenSlime, gameObject.transform.position, Quaternion.identity); // instantiate at current location
+                GameObject.Find("FrozenPlayer(Clone)").GetComponent<frozenSlime>().currentAmmo = jumpAmmo - 1; // moves ammo to frozen to then be moved to new player
+                Destroy(gameObject);
+            }
         }
     }
 }
