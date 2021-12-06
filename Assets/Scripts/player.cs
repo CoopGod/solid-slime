@@ -5,7 +5,7 @@ using UnityEngine;
 public class player : MonoBehaviour
 {
     // Global Variables
-    public int jumpAmmo = 0;
+    public int jumpAmmo = -1;
     public float playerSpeed;
     public float playerJumpMultiplier;
     float jumpTimeCounter;
@@ -24,6 +24,11 @@ public class player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // get jump count if none yet
+        if (jumpAmmo < 0)
+        {
+            jumpAmmo = GameObject.Find("gameController").GetComponent<gameController>().jumpCount;
+        }
         Vector3 movement = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f);
         transform.position += movement * Time.deltaTime * playerSpeed;
         Jump();
@@ -66,8 +71,8 @@ public class player : MonoBehaviour
         {
             if (jumpAmmo > 0)
             {
+                GameObject.Find("gameController").GetComponent<gameController>().jumpCount -= 1;
                 Instantiate(frozenSlime, gameObject.transform.position, Quaternion.identity); // instantiate at current location
-                GameObject.Find("FrozenPlayer(Clone)").GetComponent<frozenSlime>().currentAmmo = jumpAmmo - 1; // moves ammo to frozen to then be moved to new player
                 Destroy(gameObject);
             }
         }
