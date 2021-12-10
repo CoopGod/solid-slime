@@ -9,6 +9,7 @@ public class gameController : MonoBehaviour
     public int jumpCount = 2;
     int previousCount = 0;
     public GameObject jumpCounter;
+    public AudioSource iceSound;
 
     // Change text sixe to reflect how large the screen is
     void Start()
@@ -22,6 +23,10 @@ public class gameController : MonoBehaviour
         if (previousCount != jumpCount)
         {
             jumpCounter.GetComponent<Text>().text = jumpCount.ToString();
+            if (previousCount > jumpCount) // if jumpCount decreases/ player freezes, play sound
+            {
+                iceSound.Play();
+            }
             previousCount = jumpCount;
         }
     }
