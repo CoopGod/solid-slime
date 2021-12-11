@@ -13,6 +13,7 @@ public class checkpoint : MonoBehaviour
     Vector3 minScale;
     bool given = false;
     public int checkpointGive = 1;
+    AudioSource checkpointSound;
 
     // To init spawn location and others
     void Start()
@@ -20,6 +21,7 @@ public class checkpoint : MonoBehaviour
         spawnLocation = GameObject.Find("SpawnLocation");
         maxScale = new Vector3(0.2f, 0.25f, 0);
         minScale = new Vector3(-0.2f, 0.25f, 0);
+        checkpointSound = gameObject.GetComponent<AudioSource>();
     }
 
     // Rotate checkpoint like a flag from sonic (because cool)
@@ -55,6 +57,7 @@ public class checkpoint : MonoBehaviour
                 GameObject.Find("Player(Clone)").GetComponent<player>().jumpAmmo += checkpointGive;
                 GameObject.Find("gameController").GetComponent<gameController>().jumpCount += checkpointGive;
                 given = true;
+                checkpointSound.Play();
             }
         }
     }
