@@ -15,12 +15,14 @@ public class player : MonoBehaviour
     public GameObject frozenSlime; 
     Rigidbody2D rb;
     Animator animator;
+    AudioSource jumpSound;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         animator = gameObject.GetComponent<Animator>();
+        jumpSound = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -46,6 +48,7 @@ public class player : MonoBehaviour
             jumpTimeCounter = jumpTime;
             hasJumped = true;
             animator.SetBool("isJumping", true);
+            jumpSound.Play(); // play jumping noise
         }
 
         if (Input.GetKeyUp(KeyCode.Space))
