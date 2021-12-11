@@ -14,11 +14,13 @@ public class player : MonoBehaviour
     bool hasJumped = false;
     public GameObject frozenSlime; 
     Rigidbody2D rb;
+    Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        animator = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -43,6 +45,7 @@ public class player : MonoBehaviour
             rb.velocity = Vector2.up * (playerJumpMultiplier -0.5f);
             jumpTimeCounter = jumpTime;
             hasJumped = true;
+            animator.SetBool("isJumping", true);
         }
 
         if (Input.GetKeyUp(KeyCode.Space))

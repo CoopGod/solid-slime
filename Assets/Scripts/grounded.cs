@@ -6,11 +6,13 @@ public class grounded : MonoBehaviour
 {
     // Global Variables
     GameObject Player;
+    Animator animator;
 
     // To initilize Player variable
     void Start()
     {
         Player = gameObject.transform.parent.gameObject;
+        animator = Player.GetComponent<Animator>();
     }
 
     // Update if players 'feet' are on the ground
@@ -19,6 +21,7 @@ public class grounded : MonoBehaviour
         if (col.gameObject.tag == "Ground")
         {
             Player.GetComponent<player>().isGrounded = true;
+            animator.SetBool("isJumping", false);
         }
     }
 
