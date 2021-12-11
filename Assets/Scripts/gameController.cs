@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.SceneManagement;
 
 public class gameController : MonoBehaviour
 {
@@ -83,6 +84,13 @@ public class gameController : MonoBehaviour
             {
                 cg.temperature.value = 0;
             }
+        }
+
+        // restart current level when reset button is pressed
+        if (Input.GetButtonDown("Reset"))
+        {
+            Scene scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(scene.name);
         }
     }
 }
