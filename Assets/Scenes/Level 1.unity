@@ -1051,6 +1051,22 @@ PrefabInstance:
       propertyPath: m_FontData.m_Alignment
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 6971894137873742069, guid: 5ebeab6000982f04d8f5d08da7feeada, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 710.8277
+      objectReference: {fileID: 0}
+    - target: {fileID: 6971894137873742069, guid: 5ebeab6000982f04d8f5d08da7feeada, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 177.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 6971894137873742069, guid: 5ebeab6000982f04d8f5d08da7feeada, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 20.1043
+      objectReference: {fileID: 0}
+    - target: {fileID: 6971894137873742069, guid: 5ebeab6000982f04d8f5d08da7feeada, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -79.729
+      objectReference: {fileID: 0}
     - target: {fileID: 7258791481206555840, guid: 5ebeab6000982f04d8f5d08da7feeada, type: 3}
       propertyPath: m_RootOrder
       value: 1

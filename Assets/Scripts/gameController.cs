@@ -71,5 +71,18 @@ public class gameController : MonoBehaviour
                 cg.temperature.value = 0;
             }
         }
+        // when freeze is clicked too quickly the text and post process will not fade, this combats it
+        if (!freezeTextDown && !freezeTextUp)
+        {
+            if (freezeText.color.a > 0)
+            {
+                lightBlue.a = 0;
+                freezeText.color = lightBlue;
+            }
+            if (cg.temperature.value < 0)
+            {
+                cg.temperature.value = 0;
+            }
+        }
     }
 }
