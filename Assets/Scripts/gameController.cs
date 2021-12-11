@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.PostProcessing;
 
 public class gameController : MonoBehaviour
 {
@@ -16,10 +18,14 @@ public class gameController : MonoBehaviour
     public Text freezeText;
     public Color lightBlue;
 
+    public PostProcessVolume volume;
+    ColorGrading cg;
+
     // Change text sixe to reflect how large the screen is
     void Start()
     {
         jumpCounter.GetComponent<Text>().fontSize = Screen.width / 100 * 12;
+        volume.profile.TryGetSettings(out cg);
     }
     
     void Update()
@@ -41,7 +47,9 @@ public class gameController : MonoBehaviour
         {   
             lightBlue.a = lightBlue.a + 0.9f * Time.deltaTime;
             freezeText.color = lightBlue;
-            Debug.Log(freezeText.color.a);
+            // post process a cooler look
+            cg.temperature.value -= 30 * Time.deltaTime;
+
             if (freezeText.color.a >= 1)
             {
                 freezeTextUp = false;
@@ -50,11 +58,16 @@ public class gameController : MonoBehaviour
         }
         if (freezeTextDown)
         {
+            // change text transparency
             lightBlue.a = lightBlue.a - 0.9f * Time.deltaTime;
             freezeText.color = lightBlue;
+            // post process back to a warmer look
+            cg.temperature.value += 30 * Time.deltaTime;
+
             if (freezeText.color.a <= 0)
             {
                 freezeTextDown = false;
+                cg.temperature.value = 0;
             }
         }
     }
