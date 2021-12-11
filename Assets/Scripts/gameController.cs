@@ -25,6 +25,7 @@ public class gameController : MonoBehaviour
     void Start()
     {
         jumpCounter.GetComponent<Text>().fontSize = Screen.width / 100 * 12;
+        freezeText.fontSize = Screen.width / 100 * 10;
         volume.profile.TryGetSettings(out cg);
     }
     
