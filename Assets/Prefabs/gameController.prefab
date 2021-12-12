@@ -60,6 +60,7 @@ GameObject:
   - component: {fileID: 7258791481206555847}
   - component: {fileID: 250640278}
   - component: {fileID: 250640281}
+  - component: {fileID: 1671873248}
   m_Layer: 0
   m_Name: gameController
   m_TagString: Untagged
@@ -98,6 +99,8 @@ MonoBehaviour:
   jumpCount: 2
   jumpCounter: {fileID: 7929799349302341296}
   iceSound: {fileID: 250640281}
+  freezeTextUp: 0
+  freezeTextDown: 0
   freezeText: {fileID: 4133718077301570942}
   lightBlue: {r: 0.5686275, g: 0.8, b: 0.8862745, a: 0}
   volume: {fileID: 1092519102}
@@ -293,6 +296,32 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!61 &1671873248
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7258791481206555846}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 15.477753, y: 8.905771}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.445858, y: 0.13616276}
+  m_EdgeRadius: 0
 --- !u!1 &7258791481779511162
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,11 +490,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 9ec0fa9427b15354cbc938f56417f4b9, type: 3}
-    m_FontSize: 24
+    m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 1
+    m_MaxSize: 100
     m_Alignment: 6
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -507,8 +536,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.000014305, y: -77}
-  m_SizeDelta: {x: 454.4986, y: 172.22131}
+  m_AnchoredPosition: {x: 20.1043, y: -79.729}
+  m_SizeDelta: {x: 710.8277, y: 177.68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4231295942643616625
 CanvasRenderer:

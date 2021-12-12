@@ -93,4 +93,13 @@ public class gameController : MonoBehaviour
             SceneManager.LoadScene(scene.name);
         }
     }
+
+    // check if player has entered the level compeletion area
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "player_check") // if player has entered, move to next level
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+    }
 }
