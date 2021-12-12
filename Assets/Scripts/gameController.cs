@@ -14,8 +14,8 @@ public class gameController : MonoBehaviour
     public GameObject jumpCounter;
     public AudioSource iceSound;
 
-    bool freezeTextUp = false;
-    bool freezeTextDown = false;
+    public bool freezeTextUp = false;
+    public bool freezeTextDown = false;
     public Text freezeText;
     public Color lightBlue;
 
@@ -73,7 +73,7 @@ public class gameController : MonoBehaviour
             }
         }
         // when freeze is clicked too quickly the text and post process will not fade, this combats it
-        if (!freezeTextDown && !freezeTextUp)
+        if (!freezeTextDown && !freezeTextUp || freezeTextDown && freezeTextUp)
         {
             if (freezeText.color.a > 0)
             {
