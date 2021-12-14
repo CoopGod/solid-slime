@@ -546,10 +546,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1703400926}
-    - target: {fileID: 4105462733537127753, guid: b8592cf7869bd204f961193561368109, type: 3}
-      propertyPath: checkpointGive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4105462733537127759, guid: b8592cf7869bd204f961193561368109, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -3706,6 +3702,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1703400926}
+    - target: {fileID: 4105462733537127753, guid: b8592cf7869bd204f961193561368109, type: 3}
+      propertyPath: checkpointGive
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4105462733537127759, guid: b8592cf7869bd204f961193561368109, type: 3}
       propertyPath: m_RootOrder
       value: 6
