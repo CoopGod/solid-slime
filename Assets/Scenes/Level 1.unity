@@ -2788,6 +2788,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: gameController
       objectReference: {fileID: 0}
+    - target: {fileID: 7258791481779511142, guid: 5ebeab6000982f04d8f5d08da7feeada, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1327340661}
+    - target: {fileID: 7258791481779511163, guid: 5ebeab6000982f04d8f5d08da7feeada, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7258791481779511163, guid: 5ebeab6000982f04d8f5d08da7feeada, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7258791481779511163, guid: 5ebeab6000982f04d8f5d08da7feeada, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7258791481779511163, guid: 5ebeab6000982f04d8f5d08da7feeada, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7258791481779511163, guid: 5ebeab6000982f04d8f5d08da7feeada, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7258791481779511163, guid: 5ebeab6000982f04d8f5d08da7feeada, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7258791481779511163, guid: 5ebeab6000982f04d8f5d08da7feeada, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7258791481779511163, guid: 5ebeab6000982f04d8f5d08da7feeada, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7258791481779511163, guid: 5ebeab6000982f04d8f5d08da7feeada, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7258791481779511163, guid: 5ebeab6000982f04d8f5d08da7feeada, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ebeab6000982f04d8f5d08da7feeada, type: 3}
 --- !u!1001 &1312315910
@@ -2912,6 +2956,11 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!20 &1327340661 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2836908885855912407, guid: 10f120e3537f5e443a44b3951df9e077, type: 3}
+  m_PrefabInstance: {fileID: 2836908885081004422}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1327340666 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2836908885855912404, guid: 10f120e3537f5e443a44b3951df9e077, type: 3}
