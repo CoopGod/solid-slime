@@ -8,7 +8,7 @@ public class checkpoint : MonoBehaviour
     GameObject spawnLocation;
     public GameObject player;
     bool scaleUp = true;
-    public Vector3 increase;
+    public float increase;
     Vector3 maxScale;
     Vector3 minScale;
     bool given = false;
@@ -29,7 +29,7 @@ public class checkpoint : MonoBehaviour
     {
         if (scaleUp)
         {
-            gameObject.transform.localScale += increase;
+            gameObject.transform.localScale += new Vector3(1f, 0f, 0f) * increase * Time.deltaTime;
             if (transform.localScale.x >= maxScale.x)
             {
                 scaleUp = false;
@@ -37,7 +37,7 @@ public class checkpoint : MonoBehaviour
         }
         if (!scaleUp)
         {
-            transform.localScale -= increase;
+            gameObject.transform.localScale += new Vector3(-1f, 0f, 0f) * increase * Time.deltaTime;
             if (transform.localScale.x <= minScale.x)
             {
                 scaleUp = true;

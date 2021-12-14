@@ -98,8 +98,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  increase: {x: 0.0005, y: 0, z: 0}
-  checkpointGive: 2
+  increase: 0.2
+  checkpointGive: 1
 --- !u!61 &4105462733537127756
 BoxCollider2D:
   m_ObjectHideFlags: 0
